@@ -24,6 +24,18 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	<script type="text/javascript" language="javascript">
+	function visualizza(id){
+		if (document.getElementById){
+		if(document.getElementById(id).style.display == 'none'){
+      document.getElementById(id).style.display = 'block';
+		}else{
+      document.getElementById(id).style.display = 'none';
+		}
+		}
+	}	
+	</script>
 
 </head>
 
@@ -90,14 +102,22 @@
 							<a href="V&G_decolletè.html" class="list-group-item">Decolleté</a>
 							<a href="V&G_ballerine.html" class="list-group-item">Ballerine</a>
 							<a href="V&G_scarpebasse.html" class="list-group-item">Scarpe basse</a>
-							<a href="#" class="list-group-filter visible-xs-block visible-sm-block">FILTRA</a>
 						</div>
+							
+							<!-- Inizio codice DIV #testo -->
+							<div id="testo"><a href="#" onclick="visualizza('filtra'); return false" class="list-group-filter visible-xs-block ">
+							FILTRA</a>
+							<!-- Fine codice DIV #testo -->
+							</div>
+							
+						
 					
-					<hr>
-					<div id="shoe-size">
+					<div id="filtra">
+					<div id="shoe-size" class="display:none-xs" class="visible-sm">
+						<hr>
 						<a href="#" class="list-group-item">TAGLIA</a>
-						</div>
-						<div id="all-size">	
+						
+						<div id="all-size" >	
 							
 								<a href="#" class="list-group-item"><input type="checkbox" id="SIZE-34" data-f="34" />
 								<label for="SIZE-34">34</label></a>
@@ -117,9 +137,11 @@
 						</div>
 					
 					<hr>
-					<div id="shoe-color">
+					</div>
+					
+					<div id="shoe-color" class="display:none-xs" class="visible-sm">
 						<a href="#" class="list-group-item">COLORE</a>
-						</div>
+						
 						<div id="all-colors">	
 							
 								<a href="#" class="list-group-item"><input type="checkbox" id="color-beige" data-f="beige" />
@@ -137,6 +159,8 @@
 								
 						</div>
 					</div>
+					</div>
+				  </div>
 				  </div>
             </div>
 			<h1 style="padding:20px 70px 20px 0;  text-align:center;">SNEAKERS</h1>
@@ -182,18 +206,9 @@
                                 <h4 class="pull-right">$24.99</h4>
                                 <h4><a href="#">First Product</a>
                                 </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">15 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -204,18 +219,9 @@
                                 <h4 class="pull-right">$64.99</h4>
                                 <h4><a href="#">Second Product</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">12 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -226,18 +232,9 @@
                                 <h4 class="pull-right">$74.99</h4>
                                 <h4><a href="#">Third Product</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">31 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -248,18 +245,9 @@
                                 <h4 class="pull-right">$84.99</h4>
                                 <h4><a href="#">Fourth Product</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">6 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -270,27 +258,26 @@
                                 <h4 class="pull-right">$94.99</h4>
                                 <h4><a href="#">Fifth Product</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">18 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
+                            
+                        </div>
+                    </div>
+					
+					<div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x150" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$94.99</h4>
+                                <h4><a href="#">Sixth Product</a>
+                                </h4>
+                                
                             </div>
+                            
                         </div>
                     </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-                    </div>
+                    
 
                 </div>
 
