@@ -4353,11 +4353,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar-nav {
-    float: right;
+    float: left;
     margin: 0;
   }
   .navbar-nav > li {
-    float: rigt;
+    float: left;
   }
   .navbar-nav > li > a {
     padding-top: 15px;
